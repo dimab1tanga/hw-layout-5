@@ -5,6 +5,7 @@
   --accent-color: #2196f3;
   --primary-bgd-color: #e5e5e5;
   --secondary-bgd-color: #ffffff;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .body {
@@ -14,8 +15,15 @@
   letter-spacing: 0.03em;
 }
 
-.site-nav .link.current {
-  color: var(--accent-color);
+.link.current::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 /* КНОПКА */

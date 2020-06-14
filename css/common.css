@@ -5,6 +5,7 @@
   --accent-color: #2196f3;
   --primary-bgd-color: #e5e5e5;
   --secondary-bgd-color: #ffffff;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* html {
   box-sizing: border-box;
@@ -82,6 +83,7 @@ ul {
 
 .link {
   display: block;
+  position: relative;
   text-decoration: none;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -90,6 +92,8 @@ ul {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .site-nav .link.current {
@@ -112,6 +116,8 @@ ul {
 .auth-nav .contacts:hover,
 .auth-nav .contacts:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .contacts-list {
@@ -231,8 +237,11 @@ ul {
   margin-bottom: 9px;
 }
 
-.contacts-mail:hover {
+.contacts-mail:hover,
+.contacts-mail:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .contacts-tel {
@@ -244,8 +253,11 @@ ul {
   text-decoration: none;
 }
 
-.contacts-tel:hover {
+.contacts-tel:hover,
+.contacts-tel:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .social-box {
@@ -295,8 +307,11 @@ ul {
   display: none;
 }
 
-.social-list .link-item:hover {
+.social-list .link-item:hover,
+.social-list .link-item:focus {
   background-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .sign-up {

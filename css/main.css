@@ -5,6 +5,7 @@
   --accent-color: #2196f3;
   --primary-bgd-color: #e5e5e5;
   --secondary-bgd-color: #ffffff;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* html {
@@ -24,7 +25,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.header {
+/* .header {
   background-color: var(--secondary-bgd-color);
 }
 
@@ -41,7 +42,7 @@ ul {
 }
 .studio {
   color: var(--primary-text-color);
-}
+} */
 
 /* колір основного тексту #212121 */
 /* колір вториного тескту #757575 */
@@ -53,16 +54,27 @@ ul {
 /* колір акценту #2196F3 */
 
 /* Site nav */
-.site-nav .link {
+/* .site-nav .link {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
   margin-top: 0px;
+} */
+
+.link.current::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -33px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
-.site-nav .link:hover,
+/* .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
 }
@@ -73,7 +85,7 @@ ul {
 }
 .site-nav .link.current {
   color: var(--accent-color);
-}
+} */
 
 /* Hero */
 
@@ -344,8 +356,11 @@ p {
   border-radius: 50%;
 }
 
-.social-elements:hover {
+.social-elements:hover,
+.social-elements:focus {
   background-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .social-icon {
@@ -355,7 +370,8 @@ p {
   margin: 12px;
 }
 
-.social-icon:hover {
+.social-icon:hover,
+.social-icon:focus {
   fill: #ffffff;
 }
 
@@ -403,6 +419,8 @@ p {
 }
 .clients-list > .link:hover {
   border: 1px solid var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 .link > .client {
   fill: #afb1b8;
