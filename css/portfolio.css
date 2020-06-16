@@ -89,8 +89,53 @@ button:focus {
   margin-bottom: 0px;
 }
 
+.overlay-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.link-card::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: trasform 250ms var(--timing-function);
+}
+
+.overlay-card:hover .link-card::before {
+  transform: translateY(0%);
+}
+
+/* .link-card:hover::before {
+  transform: translateY(0%);
+} */
+
+/* .link-card {
+  display: inline-block;
+  position: relative;
+} */
+
 .description {
-  display: none;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: trasform 250ms var(--timing-function);
+  opacity: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  padding: 63px 24px;
+  color: #ffffff;
+}
+
+.description:hover {
+  opacity: 1;
 }
 
 a {
